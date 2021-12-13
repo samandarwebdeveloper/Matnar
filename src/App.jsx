@@ -2,16 +2,20 @@ import "./Assets/scss/normalize.scss";
 import "./App.scss";
 
 
-import { BrowserRouter } from "react-router-dom";
 
+import { Route, Switch  } from "react-router";
+
+// components
+import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>
+      <Header />
+      <Switch>
+        <Route path="/"><Home /></Route>
+      </Switch>
     </>
   );
 }
