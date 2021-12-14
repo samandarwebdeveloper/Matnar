@@ -1,0 +1,103 @@
+
+.season-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .season-section__content {
+        width: 55%;
+        padding: 30px 65px;
+        .season-section__lead {
+            font-family: 'Podkova', sans-serif;
+            font-size: 60px;
+            line-height: 66px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-bottom: 35px;
+        }
+
+        .season-content__line {
+            width: 120px;
+            margin: 0 auto 50px auto;
+            background-color: transparent;
+            height: 0;
+            border: 1px solid #FFFFFF;
+        }
+
+        .season-section__list {
+            list-style-type: none;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            .season-list__item {
+                text-align: center;
+                
+                img {
+                    margin-bottom: 25px;
+                    width: 100%;
+                    max-width: 260px;
+                }
+                .season-item__lead {
+                    font-family: 'Playfair Display SC', serif;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    margin-bottom: 10px;
+                }
+
+                .season-item__text {
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: #D0D0D0;
+                }
+            }
+            .season-list__item ~ .season-list__item {
+                margin-left: 50px;
+            }
+        }
+    }
+
+    .season-section__image__wrap {
+        position: relative;
+        z-index: 0;
+        width: 45%;
+
+        .season-section__image {
+            width: 100%;
+            max-width: 880px;
+        }
+        .season-section__image-content {
+            z-index: 1;
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            .season-image__lead {
+                font-size: 36px;
+                line-height: 36px;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+    
+            .season-image__link {
+                border: 2px solid #000;
+                text-decoration: none;
+                color: #000;
+                font-size: 18px;
+                line-height: 23px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                padding: 10px 30px;
+                transition: all 0.3s ease;
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+        
+    }
+    
+}

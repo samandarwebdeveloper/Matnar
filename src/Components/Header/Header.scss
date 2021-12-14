@@ -1,6 +1,6 @@
 
 .site-header {
-    
+    padding-top: 5px;
     .site-header__wrapper {
         display: flex;
         align-items: center;
@@ -50,7 +50,7 @@
         
         .site-logo__link {
             display: block;
-            margin-left: 140px;
+            margin-left: 120px;
         }
 
         .header-top__right {
@@ -110,8 +110,10 @@
                 color: #969696;
                 cursor: pointer;
                 svg {
+                    display: block;
+                    width: 38px;
                     path {
-                        fill: white;
+                        fill: #85BCFF;
                     }
                 }
                 &:hover {
@@ -122,41 +124,54 @@
                 
                 svg {
                     display: block;
+                    width: 38px;
+                    path {
+                        fill: #85BCFF;
+                    }
                 }
             }
             .search-input__wrap {
-                padding: 0 10px;
+                display: none;
+                padding: 0;
                 position: absolute;
                 background-color: #fff;
-                display: none;
-                align-items: center;
-                left: -230px;
-                top: 0;
+                left: -180px;
+                top: 5px;
                 border-radius: 6px;
+                width: 228px;
+                height: 40px;
                 .search-btn {
+                    position: absolute;
+                    top: 0px;
+                    left: 5px;
                     background-color: transparent;
                     border: transparent;
-                    width: 20px;
-                    height: 40px;
+                    width: 10px;
+                    height: 30px;
                     cursor: pointer;
                     &:hover {
                         opacity: 0.6;
                     }
                     svg {
+                        width: 24px;
                         display: inline-block;
                         path {
-                            fill: black;
+                            
+                            fill: #000;
                         }
                     }
                 }   
                 .search__input {
+                    width: 100%;
                     border: transparent;
                     outline: none;
-                    padding: 10px;
-                    font-size: 16px;
+                    padding: 10px 0 10px 35px;
                     height: 40px;
-                    color: #000;
-                    
+                    font-size: 18px;
+                    line-height: 23px;
+                    color: rgba(0, 0, 0, 0.6);
+                    background-color: #A3DEFF;
+                    border-radius: 6px;
                 }
             }
         }
@@ -200,10 +215,10 @@
 .modal-link {
     display: none;
     background: linear-gradient(180deg, #06476B 0%, #000000 100%);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(12px);
     transition: all 0.5s;
     width: 100%;
-    height: 75vh;
+    height: 600px;
     position: absolute;
     z-index: 999;
     align-items: flex-start;

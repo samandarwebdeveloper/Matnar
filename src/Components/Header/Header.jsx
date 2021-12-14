@@ -11,8 +11,8 @@ import SignUpModal from "../Sign-up-modal/Sign-up-modal";
 import RuLangIcon from "../../Assets/image/russia.png"
 import UzLangIcon from "../../Assets/image/uzbekistan.png"
 import Minefer from "../../Assets/image/minefer";
-import Liked from "../../Assets/image/liked.png";
-import Shopping from "../../Assets/image/shopping.png"
+import LikedIcon from "../../Assets/image/liked";
+import ShoppingIcon from "../../Assets/image/shoppingIcon";
 import LogoHead from "../../Assets/image/matnar-logo.png"
 
 
@@ -48,8 +48,9 @@ function Header() {
     const searchInput = useRef();
 
     const OpenSearch = () => {
-        searchInput.current.style.display = 'flex'
+        searchInput.current.style.display = 'block'
     }
+    
     const CloseSearch = (evt) => {
         if (evt.target !== searchInput.current) {
             searchInput.current.style.display = 'none'
@@ -76,7 +77,11 @@ function Header() {
                                 <button className="modal-lang__btn"><img src={RuLangIcon} alt="flag" /><span>Русский</span></button>
                                 <button className="modal-lang__btn"><img src={UzLangIcon} alt="flag" /><span>O'zbekcha</span></button>
                             </div>
-                            <SignUpModal modalLink={CloseWindow} />
+                            {/* <select>
+                                <option value="eng">ENG</option>
+                                <option value="ru">RU</option>
+                                <option value="uz">UZ</option>
+                            </select> */}
                             <button className="header__btn" onClick={HandleOpenModal}>Личный кабинет</button>
                             <div className="header-btn__box">
                                 <div>
@@ -88,8 +93,8 @@ function Header() {
                                         </form>
                                     </div>
                                 </div>
-                                <button className="header__btn"><img src={Liked} alt="liked" /></button>
-                                <button className="header__btn"><img src={Shopping} alt="shopping" /></button>
+                                <button className="header__btn"><LikedIcon /></button>
+                                <button className="header__btn"><ShoppingIcon /></button>
                             </div>
                         </div>
                     </div>
@@ -105,6 +110,7 @@ function Header() {
                     </div>
                 </div>
             </header>
+            <SignUpModal modalLink={CloseWindow} />
             <div className="modal-link" onMouseEnter={onHoverModal} onMouseLeave={onModal} ref={modalLink}>
                 <div className="modal-link__wrapper">
                     <div className="modal-wrapper__left">
