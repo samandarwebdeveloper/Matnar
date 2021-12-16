@@ -1,0 +1,24 @@
+.new-products-section {
+    padding: 50px 0;
+    color: ivory;
+
+    .new-products__lead {
+        font-family: 'Podkova', sans-serif;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 67px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+
+    .new-products__line {
+        width: 120px;
+        margin: 0 auto 50px auto;
+        background-color: transparent;
+        height: 0;
+        border: 1px solid #FFFFFF;
+        margin-bottom: 80px;
+    }
+}

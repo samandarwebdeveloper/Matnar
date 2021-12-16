@@ -3,6 +3,8 @@ import "./Home.scss"
 
 //components
 import Season from "../Season/Season"
+import Collection from "../Collection/Collection"
+import NewProducts from "../New-products/New-products"
 
 //images
 import HeroVideo from "../../Assets/video/matnar.mp4"
@@ -21,6 +23,8 @@ function Home() {
                 </div>
             </div>
             <Season />
+            <Collection />
+            <NewProducts />
         </>
     )
 }
