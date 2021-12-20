@@ -4,12 +4,13 @@
     align-items: flex-start;
     justify-content: space-between;
     .season-section__content {
-        width: 55%;
+        // width: 55%;
         padding: 30px 65px;
         .season-section__lead {
             font-family: 'Podkova', sans-serif;
-            font-size: 60px;
-            line-height: 66px;
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 48px;
             text-align: center;
             text-transform: uppercase;
             color: #FFFFFF;
@@ -60,11 +61,11 @@
     .season-section__image__wrap {
         position: relative;
         z-index: 0;
-        width: 45%;
+        // width: 45%;
 
         .season-section__image {
             width: 100%;
-            max-width: 880px;
+            // max-width: 880px;
         }
         .season-section__image-content {
             z-index: 1;

@@ -1,6 +1,6 @@
 import "./Sign-up-modal.scss"
 
-
+// images
 import CloseIcon from "../../Assets/image/close-icon.png"
 
 function SignUpModal({modalLink}) {

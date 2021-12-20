@@ -5,12 +5,13 @@ import { Link } from "react-router-dom"
 //images
 import SeasonListImage from "../../Assets/image/season-list__image.png"
 import SeasonImage from "../../Assets/image/season-image.png"
+import { Row } from "react-bootstrap"
 
 function Season() {
     return (
-        <div className="container">
-            <div className="season-section">
-                <div className="season-section__content">
+        <div className="container-fluid">
+            <Row className="season-section">
+                <div className="col-sm-6 season-section__content">
                     <h2 className="season-section__lead">СЕЗОН 2021/22</h2>
                     <hr className="season-content__line" />
                     <ul className="season-section__list">
@@ -37,14 +38,14 @@ function Season() {
                         </li>
                     </ul>
                 </div>
-                <div className="season-section__image__wrap">
+                <div className="col-sm-6 season-section__image__wrap">
                     <img className="season-section__image" src={SeasonImage} alt="season" />
                     <div className="season-section__image-content">
                         <h2 className="season-image__lead">Новая коллекция</h2>
                         <Link className="season-image__link" to="/">Каталог</Link>
                     </div>
                 </div>
-            </div>
+            </Row>
         </div>
     )
 }

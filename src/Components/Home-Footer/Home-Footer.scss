@@ -1,0 +1,17 @@
+.home-footer {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+
+    .home-footer__top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .home-footer__bottom {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+}

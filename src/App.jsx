@@ -1,4 +1,3 @@
-import "./Assets/scss/normalize.scss";
 import "./App.scss";
 
 
@@ -14,7 +13,7 @@ function App() {
     <div className="app">
       <Header />
       <Switch>
-        <Route path="/"><Home /></Route>
+        <Route path="/" exact><Home /></Route>
       </Switch>
     </div>
   );

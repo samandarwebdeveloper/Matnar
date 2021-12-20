@@ -1,6 +1,6 @@
 
 .site-header {
-    padding-top: 5px;
+    padding-top: 10px;
     .site-header__wrapper {
         display: flex;
         align-items: center;
@@ -10,11 +10,7 @@
     }
     .header-top {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-left: 20px;
-        
+
         .header-top__left {
             margin-right: auto;
             .header-top__tel {
@@ -28,7 +24,6 @@
                 display: flex;
                 align-items: center;
                 .header-top__item {
-                    
                     padding: 0px;
                     
                     .header-top__lang-link {
@@ -48,18 +43,23 @@
             }
         }
         
-        .site-logo__link {
-            display: block;
-            margin-left: 120px;
+        .site-logo__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .site-logo__link {
+                display: block;
+                
+            }
         }
 
         .header-top__right {
             display: flex;
             align-items: center;
+            justify-content: right;
             position: relative;
             z-index: 1;
             margin-bottom: 50px;
-            margin-left: auto;
             .header-lang__btn {
                 background-color: transparent;
                 border: transparent;
@@ -75,6 +75,7 @@
                 display: none;
                 position: absolute;
                 top: 0px;
+                left: 0;
                 background-color: #fff;
                 z-index: 1;
                 padding: 5px;
@@ -187,7 +188,7 @@
             list-style-type: none;
             display: flex;
             align-items: center;
-            
+            justify-content: space-evenly;
             .header-links-item {
                 .header-link {
                     display: block;
@@ -204,10 +205,7 @@
                     }
                 }
             }
-            .header-links-item ~ .header-links-item {
-                margin-left: 100px;
-
-            }
+            
         }
     }
 
@@ -218,7 +216,7 @@
     backdrop-filter: blur(12px);
     transition: all 0.5s;
     width: 100%;
-    height: 600px;
+    height: 620px;
     position: absolute;
     z-index: 999;
     align-items: flex-start;
@@ -257,3 +255,19 @@
     
 }
 
+.site-chat-bot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    z-index: 9999;
+    border-radius: 50%;
+    z-index: 999;
+    img {
+        width: 100%;
+        display: block;
+    }
+}

@@ -1,6 +1,7 @@
-.new-products-section {
-    padding: 50px 0;
-    .new-products__lead {
+.brands-section {
+    padding: 40px 0;
+    
+    .brands-lead {
         font-family: 'Podkova', sans-serif;
         font-weight: 900;
         font-size: 48px;
@@ -8,26 +9,29 @@
         text-align: center;
         text-transform: uppercase;
         color: #FFFFFF;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
-    .new-products__line {
+    .brands__line {
         width: 120px;
         margin: 0 auto 50px auto;
         background-color: transparent;
         height: 0;
         border: 1px solid #FFFFFF;
-        margin-bottom: 80px;
+        margin-bottom: 30px;
     }
 
-    .new-products__list {
+    .brands__list {
         display: flex;
         align-items: flex-start;
         justify-content: center;
+        overflow: hidden;
+    }
 
-        .home-channel__item-img {
-            width: 100%;
-            height: 325px;
-        }
+    .brands__item {
+        
+    }
+    .brands__item ~ .brands__item {
+        margin-left: 90px;
     }
 }
