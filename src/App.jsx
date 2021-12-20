@@ -15,9 +15,13 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact><Home /></Route>
+        
         <Route path="/vomen"><Product /></Route>
+
         <Route path="/men"><Product /></Route>
+
         <Route path="/kids"><Product /></Route>
+        
       </Switch>
     </div>
   );
