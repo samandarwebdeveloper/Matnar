@@ -1,4 +1,3 @@
-import "./Assets/scss/normalize.scss";
 import "./App.scss";
 
 
@@ -12,7 +11,7 @@ import Product from "./pages/Product/Product";
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Header />
       <Switch>
         <Route path="/" exact><Home /></Route>
@@ -20,7 +19,7 @@ function App() {
         <Route path="/men"><Product /></Route>
         <Route path="/kids"><Product /></Route>
       </Switch>
-    </>
+    </div>
   );
 }
 

@@ -1,8 +1,16 @@
 import "./Header.scss"
+import '../../Assets/scss/normalize.scss'
 
 //Hooks
 import { NavLink, Link } from "react-router-dom";
+<<<<<<< HEAD
 import { useContext, useRef } from "react"
+=======
+import { useRef } from "react"
+import { useState, useEffect } from "react";
+
+import { Row } from "react-bootstrap";
+>>>>>>> 23b4544acf2697f1cdf5f64d34b981a041d4a119
 
 //components
 import SignUpModal from "../Sign-up-modal/Sign-up-modal";
@@ -11,10 +19,15 @@ import SignUpModal from "../Sign-up-modal/Sign-up-modal";
 import RuLangIcon from "../../Assets/image/russia.png"
 import UzLangIcon from "../../Assets/image/uzbekistan.png"
 import Minefer from "../../Assets/image/minefer";
-import Liked from "../../Assets/image/liked.png";
-import Shopping from "../../Assets/image/shopping.png"
+import LikedIcon from "../../Assets/image/liked";
+import ShoppingIcon from "../../Assets/image/shoppingIcon";
 import LogoHead from "../../Assets/image/matnar-logo.png"
+<<<<<<< HEAD
 import { Context } from "../../Context/headerContext";
+=======
+import ChatIcon from "../../Assets/image/chat-icon.png"
+
+>>>>>>> 23b4544acf2697f1cdf5f64d34b981a041d4a119
 
 
 function Header() {
@@ -50,35 +63,60 @@ function Header() {
     const searchInput = useRef();
 
     const OpenSearch = () => {
-        searchInput.current.style.display = 'flex'
+        searchInput.current.style.display = 'block'
     }
+    
     const CloseSearch = (evt) => {
         if (evt.target !== searchInput.current) {
             searchInput.current.style.display = 'none'
         }
     }
 
+    const [showButton, setShowButton] = useState(false);
+
+    useEffect(() => {
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          setShowButton(true);
+        } else {
+          setShowButton(false);
+        }
+      });
+    }, []);
+
     return (
         <>
             <header className="site-header">
                 <div className="site-header__wrapper">
-                    <div className="header-top">
-                        <div className="header-top__left">
+                    <Row className="header-top">
+                        <div className="col-4 header-top__left">
                             <p className="header-top__tel">+998 99 111 11 95 | Работаем 7 дней в неделю | 24/7</p>
                             <ul className="header-top__list">
+<<<<<<< HEAD
                                 <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/vomen" onClick={()=> setProduct('vomen')} exact>Женское</NavLink></li>
                                 <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/men" onClick={()=> setProduct('men')}>Мужское</NavLink></li>
                                 <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/kids" onClick={()=> setProduct('kids')}>Детское</NavLink></li>
+=======
+                                <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/men">Мужское</NavLink></li>
+                                <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/" exact>Женское</NavLink></li>
+                                <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/kids">Детское</NavLink></li>
+>>>>>>> 23b4544acf2697f1cdf5f64d34b981a041d4a119
                             </ul>
                         </div>
-                        <a className="site-logo__link" href="/"><img src={LogoHead} alt="site logo" /></a>
-                        <div className="header-top__right">
+                        <div className="col-4 site-logo__wrap">
+                            <a className="site-logo__link" href="/"><img src={LogoHead} alt="site logo" /></a>
+                        </div>
+                        <div className="col-4 header-top__right">
                             <button className="header-lang__btn" onClick={langModal}><img src={RuLangIcon} alt="ru flag" /></button>
                             <div className="modal-lang__select" ref={langBox} onMouseLeave={langModalNone} onClick={langModalNone}>
                                 <button className="modal-lang__btn"><img src={RuLangIcon} alt="flag" /><span>Русский</span></button>
                                 <button className="modal-lang__btn"><img src={UzLangIcon} alt="flag" /><span>O'zbekcha</span></button>
                             </div>
-                            <SignUpModal modalLink={CloseWindow} />
+                            {/* <select>
+                                <option value="eng">ENG</option>
+                                <option value="ru">RU</option>
+                                <option value="uz">UZ</option>
+                            </select> */}
                             <button className="header__btn" onClick={HandleOpenModal}>Личный кабинет</button>
                             <div className="header-btn__box">
                                 <div>
@@ -90,13 +128,13 @@ function Header() {
                                         </form>
                                     </div>
                                 </div>
-                                <button className="header__btn"><img src={Liked} alt="liked" /></button>
-                                <button className="header__btn"><img src={Shopping} alt="shopping" /></button>
+                                <button className="header__btn"><LikedIcon /></button>
+                                <button className="header__btn"><ShoppingIcon /></button>
                             </div>
                         </div>
-                    </div>
-                    <div className="header-bottom">
-                        <ul className="header-links-list">
+                    </Row>
+                    <Row className="header-bottom">
+                        <ul className="col-8 header-links-list">
                             <li className="header-links-item"><Link className="header-link" to="/">НОВИНКИ</Link></li>
                             <li className="header-links-item"><Link className="header-link" to="/" onMouseEnter={onHoverModal} onMouseLeave={onModal}>БРЕНДЫ</Link></li>
                             <li className="header-links-item"><Link className="header-link" to="/" onMouseEnter={onHoverModal} onMouseLeave={onModal}>ОДЕЖДА</Link></li>
@@ -104,14 +142,14 @@ function Header() {
                             <li className="header-links-item"><Link className="header-link" to="/" onMouseEnter={onHoverModal} onMouseLeave={onModal}>СУМКИ</Link></li>
                             <li className="header-links-item"><Link className="header-link" to="/" onMouseEnter={onHoverModal} onMouseLeave={onModal}>АКСЕССУАРЫ</Link></li>
                         </ul>
-                    </div>
+                    </Row>
                 </div>
             </header>
             <div className="modal-link" onMouseEnter={onHoverModal} onMouseLeave={onModal} ref={modalLink}>
                 <div className="modal-link__wrapper">
                     <div className="modal-wrapper__left">
                         <h3>По разделам</h3>
-                        <ul className="modal-clothes__categories">
+                        <ul className="modal-clothes__categories list-unstyled">
                             <li><Link className="link-unstyled" to="/">Женская одежда</Link></li>
                             <li><Link className="link-unstyled" to="/">Женская обувь</Link></li>
                             <li><Link className="link-unstyled" to="/">Женская сумки</Link></li>
@@ -148,6 +186,12 @@ function Header() {
                     </div>
                 </div>
             </div>
+            <SignUpModal modalLink={CloseWindow} />
+            {showButton && (
+                <button className="site-chat-bot">
+                  <img src={ChatIcon} alt="arrow" />
+                </button>
+            )}
         </>
     )
 }

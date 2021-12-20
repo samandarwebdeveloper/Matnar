@@ -1,0 +1,37 @@
+.brands-section {
+    padding: 40px 0;
+    
+    .brands-lead {
+        font-family: 'Podkova', sans-serif;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+    }
+
+    .brands__line {
+        width: 120px;
+        margin: 0 auto 50px auto;
+        background-color: transparent;
+        height: 0;
+        border: 1px solid #FFFFFF;
+        margin-bottom: 30px;
+    }
+
+    .brands__list {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .brands__item {
+        
+    }
+    .brands__item ~ .brands__item {
+        margin-left: 90px;
+    }
+}
