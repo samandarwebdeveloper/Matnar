@@ -1,5 +1,4 @@
 import "./Header.scss"
-import '../../Assets/scss/normalize.scss'
 
 //Hooks
 import { NavLink, Link } from "react-router-dom";
