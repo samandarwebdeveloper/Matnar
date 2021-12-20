@@ -80,7 +80,7 @@ return(
       </li>
       <li>
         <span><img src={bottom} alt="" width="20"/>бренд</span>
-        <ul>
+        <ul className="selected">
           <li>бренд One</li>
           <li>бренд Two</li>
           <li>бренд Three</li>
