@@ -4,15 +4,16 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
 
 import App from './App';
+import { Provider } from './Context/headerContext';
 
 
 ReactDOM.render(
-  <>
+<>
   <BrowserRouter>
-    <App />
+    <Provider>
+      <App />
+    </Provider>
   </BrowserRouter>
-  </>,
-  document.getElementById('root')
+</>,
+document.getElementById('root')
 );
-
-

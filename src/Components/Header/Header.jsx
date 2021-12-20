@@ -3,10 +3,14 @@ import '../../Assets/scss/normalize.scss'
 
 //Hooks
 import { NavLink, Link } from "react-router-dom";
+
+import { useContext, useRef } from "react"
+
 import { useRef } from "react"
 import { useState, useEffect } from "react";
 
 import { Row } from "react-bootstrap";
+
 
 //components
 import SignUpModal from "../Sign-up-modal/Sign-up-modal";
@@ -18,16 +22,21 @@ import Minefer from "../../Assets/image/minefer";
 import LikedIcon from "../../Assets/image/liked";
 import ShoppingIcon from "../../Assets/image/shoppingIcon";
 import LogoHead from "../../Assets/image/matnar-logo.png"
+
+import { Context } from "../../Context/headerContext";
+
 import ChatIcon from "../../Assets/image/chat-icon.png"
 
 
 
+
 function Header() {
+    const {product, setProduct} = useContext(Context);
 
     const langBox = useRef();
 
     const langModal = () => {
-        
+
         langBox.current.style.display = "block";
     }
     const langModalNone = (evt) => {
@@ -83,9 +92,15 @@ function Header() {
                         <div className="col-4 header-top__left">
                             <p className="header-top__tel">+998 99 111 11 95 | Работаем 7 дней в неделю | 24/7</p>
                             <ul className="header-top__list">
+
+                                <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/vomen" onClick={()=> setProduct('vomen')} exact>Женское</NavLink></li>
+                                <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/men" onClick={()=> setProduct('men')}>Мужское</NavLink></li>
+                                <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/kids" onClick={()=> setProduct('kids')}>Детское</NavLink></li>
+
                                 <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/men">Мужское</NavLink></li>
                                 <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/" exact>Женское</NavLink></li>
                                 <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/kids">Детское</NavLink></li>
+
                             </ul>
                         </div>
                         <div className="col-4 site-logo__wrap">
