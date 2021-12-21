@@ -60,41 +60,46 @@
             position: relative;
             z-index: 1;
             margin-bottom: 50px;
-            .header-lang__btn {
-                background-color: transparent;
-                border: transparent;
-                color: #fff;
-                display: flex;
-                cursor: pointer;
-                margin-right: 10px;
-                img {
-                    margin-right: 5px;
-                }
-            }
-            .modal-lang__select {
-                display: none;
-                position: absolute;
-                top: 0px;
-                left: 0;
-                background-color: #fff;
-                z-index: 1;
-                padding: 5px;
-                .modal-lang__btn {
-                    display: inline-block;
+
+            .header-lang__wrap {
+                position: relative;
+                .header-lang__btn {
                     background-color: transparent;
                     border: transparent;
-                    margin-bottom: 5px;
-                    padding: 5px;
+                    color: #fff;
                     display: flex;
-                    align-items: center;
-                    margin: 5px 0;
                     cursor: pointer;
+                    margin-right: 10px;
                     img {
-                        max-width: 30px;
                         margin-right: 5px;
                     }
                 }
+                .modal-lang__select {
+                    display: none;
+                    position: absolute;
+                    top: 0px;
+                    left: 0;
+                    background-color: #fff;
+                    z-index: 1;
+                    padding: 5px;
+                    .modal-lang__btn {
+                        display: inline-block;
+                        background-color: transparent;
+                        border: transparent;
+                        margin-bottom: 5px;
+                        padding: 5px;
+                        display: flex;
+                        align-items: center;
+                        margin: 5px 0;
+                        cursor: pointer;
+                        img {
+                            max-width: 30px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
             }
+            
             
             .header-btn__box {
                 display: flex;
@@ -223,8 +228,9 @@
     justify-content: center;
     color: #fff;
     .modal-link__wrapper {
-        padding: 80px 40px;
+        padding: 60px 20px;
         display: flex;
+        justify-content: space-between;
         .modal-wrapper__left {
             margin-right: 20px;
             .modal-clothes__categories {
@@ -257,7 +263,7 @@
 
 .site-chat-bot {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     right: 20px;
     width: 100px;
     background: transparent;

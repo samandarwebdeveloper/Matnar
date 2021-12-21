@@ -1,6 +1,18 @@
 import "./Our-Brands.scss"
 
+import Slider from "react-slick";
+
+import { Link } from "react-router-dom";
+
 import BrandImage from "../../Assets/image/zara.png"
+import HermesImage from "../../Assets/image/hermes.png"
+import DolceImage from "../../Assets/image/dolce.png"
+import GucciImage from "../../Assets/image/gucci.png"
+import ArmaniImage from "../../Assets/image/armani.png"
+
+
+
+
 
 function OurBrands(props) {
 
@@ -9,30 +21,91 @@ function OurBrands(props) {
             img: BrandImage,
         },
         {
-            img: BrandImage,
+            img: HermesImage,
+        },
+        {
+            img: DolceImage,
+        },
+        {
+            img: GucciImage,
+        },
+        {
+            img: ArmaniImage,
         },
         {
             img: BrandImage,
         },
         {
-            img: BrandImage,
+            img: HermesImage,
         },
         {
-            img: BrandImage,
+            img: DolceImage,
+        },
+        {
+            img: GucciImage,
+        },
+        {
+            img: ArmaniImage,
         },
     ]
 
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 400,
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 3,
+                  infinite: true,
+                  dots: false
+                }
+            },
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ],
+      };
+
     return (
-        <div className="container">
-            <div className="brands-section">
+        <div>
+            <div className="container-fluid brands-section">
                 <h2 className="brands-lead">наши бренды</h2>
                 <hr className="brands__line" />
-                <div className="brands__list">
-                    {
-                        items.map( (item, i) => <Item key={i} item={item} /> )
-                    }
-                </div>
             </div>
+            <Slider {...settings}>
+                {
+                    items.map( (item, i) => <Item key={i} item={item} /> )
+                }
+            </Slider>
         </div>
     )
 }
@@ -41,7 +114,9 @@ function Item(props)
 {
     return (
         <div className="brands__item">
-            <img className="brands__item-image" src={props.item.img} alt="brand" />
+            <Link to="/">
+                <img className="brands__item-image" src={props.item.img} alt="brand" />
+            </Link>
         </div>
     )
 }

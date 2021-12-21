@@ -1,13 +1,18 @@
 .collection-carusel {
     margin: 0 auto 30px auto;
-    width: 1200px;
+    max-width: 1200px;
 
     .new-clothes__item {
+        display: block;
+        width: 100%;
+        max-width: 260px;
         color: #fff;
         text-align: center;
         margin: 10px;
 
         .new-clothes__item-image {
+            display: block;
+            width: 100%;
             margin-bottom: 30px;
         }
 

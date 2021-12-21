@@ -7,6 +7,9 @@ import Slider from "react-slick";
 
 // import leftArrow from "../../Assets/image/left-arrow.png"
 import image from "../../Assets/image/new-dress.png"
+import cloth from "../../Assets/image/cloth.png"
+import dress from "../../Assets/image/dress.png"
+
 
 
 
@@ -19,21 +22,12 @@ function Carusel(props) {
             name: "Louis XVI ATHOS",
             description: "22.300.000 sum/2203 $"
         },
-        {   img: image,
+        {   img: cloth,
             name: "Louis XVI ATHOS",
             description: "22.300.000 sum/2203 $"
         },
         {
-            img: image,
-            name: "Louis XVI ATHOS",
-            description: "22.300.000 sum/2203 $"
-        },
-        {   img: image,
-            name: "Louis XVI ATHOS",
-            description: "22.300.000 sum/2203 $"
-        },
-        {
-            img: image,
+            img: dress,
             name: "Louis XVI ATHOS",
             description: "22.300.000 sum/2203 $"
         },
@@ -42,11 +36,20 @@ function Carusel(props) {
             description: "22.300.000 sum/2203 $"
         },
         {
-            img: image,
+            img: cloth,
             name: "Louis XVI ATHOS",
             description: "22.300.000 sum/2203 $"
         },
         {   img: image,
+            name: "Louis XVI ATHOS",
+            description: "22.300.000 sum/2203 $"
+        },
+        {
+            img: dress,
+            name: "Louis XVI ATHOS",
+            description: "22.300.000 sum/2203 $"
+        },
+        {   img: cloth,
             name: "Louis XVI ATHOS",
             description: "22.300.000 sum/2203 $"
         },

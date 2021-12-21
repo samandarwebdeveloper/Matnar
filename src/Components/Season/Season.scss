@@ -1,10 +1,6 @@
 
 .season-section {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
     .season-section__content {
-        // width: 55%;
         padding: 30px 65px;
         .season-section__lead {
             font-family: 'Podkova', sans-serif;
@@ -61,16 +57,14 @@
     .season-section__image__wrap {
         position: relative;
         z-index: 0;
-        // width: 45%;
 
         .season-section__image {
             width: 100%;
-            // max-width: 880px;
         }
         .season-section__image-content {
             z-index: 1;
             position: absolute;
-            top: 85%;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;

@@ -4,11 +4,11 @@ import "./Header.scss"
 import { NavLink, Link } from "react-router-dom";
 import { useRef } from "react"
 import { useState, useEffect } from "react";
-
 import { Row } from "react-bootstrap";
 
 //components
 import SignUpModal from "../Sign-up-modal/Sign-up-modal";
+// import ModalChat from "../Modal-chat/Modal-chat";
 
 //images
 import RuLangIcon from "../../Assets/image/russia.png"
@@ -91,11 +91,14 @@ function Header() {
                             <a className="site-logo__link" href="/"><img src={LogoHead} alt="site logo" /></a>
                         </div>
                         <div className="col-4 header-top__right">
-                            <button className="header-lang__btn" onClick={langModal}><img src={RuLangIcon} alt="ru flag" /></button>
-                            <div className="modal-lang__select" ref={langBox} onMouseLeave={langModalNone} onClick={langModalNone}>
-                                <button className="modal-lang__btn"><img src={RuLangIcon} alt="flag" /><span>Русский</span></button>
-                                <button className="modal-lang__btn"><img src={UzLangIcon} alt="flag" /><span>O'zbekcha</span></button>
+                            <div className="header-lang__wrap">
+                                <button className="header-lang__btn" onClick={langModal}><img src={RuLangIcon} alt="ru flag" /></button>
+                                <div className="modal-lang__select" ref={langBox} onMouseLeave={langModalNone} onClick={langModalNone}>
+                                    <button className="modal-lang__btn"><img src={RuLangIcon} alt="flag" /><span>Русский</span></button>
+                                    <button className="modal-lang__btn"><img src={UzLangIcon} alt="flag" /><span>O'zbekcha</span></button>
+                                </div>
                             </div>
+        
                             {/* <select>
                                 <option value="eng">ENG</option>
                                 <option value="ru">RU</option>
@@ -166,16 +169,17 @@ function Header() {
                         </ul>
                     </div>
                     <div>
-                        <img src="https://picsum.photos/600/350" alt="brand" />
+                        <img src="https://picsum.photos/800/480" alt="brand" />
                     </div>
                 </div>
             </div>
-            <SignUpModal modalLink={CloseWindow} />
             {showButton && (
                 <button className="site-chat-bot">
                   <img src={ChatIcon} alt="arrow" />
                 </button>
             )}
+            <SignUpModal modalLink={CloseWindow} />
+            {/* <ModalChat /> */}
         </>
     )
 }

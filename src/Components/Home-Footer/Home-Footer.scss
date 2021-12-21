@@ -1,17 +1,91 @@
 .home-footer {
-    text-align: center;
-    padding: 20px;
+    padding: 0 20px;
     color: #fff;
 
     .home-footer__top {
+        padding-top: 30px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+
+        .footer-top__left {
+            
+            .left-footer__lead {
+                font-family: Playfair Display SC;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 30px;
+                line-height: 40px;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            .left-footer__text {
+                font-family: PT Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 150%;
+                
+            }
+        }
+
+        .footer-top__right {
+            text-align: right;
+
+            .right-footer__lead {
+                font-family: PT Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 40px;
+                line-height: 52px;
+                text-transform: uppercase;
+                color: #777777;
+            }
+
+            .right-footer__tel {
+                font-family: PT Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 40px;
+                line-height: 52px;
+                margin-bottom: 100px;
+            }
+            
+            .right-footer__mail {
+                text-decoration: none;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 30px;
+                line-height: 39px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+
+            }
+        }
     }
 
     .home-footer__bottom {
         display: flex;
         align-items: flex-start;
         justify-content: space-evenly;
+        font-family: PT Sans;
+
+        .footer-copyright {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #D0D0D0;
+        }
+
+        .footer-site__link {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 16px;
+            color: #D0D0D0;
+
+        }
     }
 }

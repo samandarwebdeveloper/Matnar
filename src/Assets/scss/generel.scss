@@ -22,10 +22,8 @@ body {
     background: linear-gradient(180deg, #06476B 0%, #000000 100%);
 }
 
-body>div {
+body > div {
     width: 100%;
-    position: relative;
-    z-index: 1;
 }
 
 img {
@@ -48,4 +46,5 @@ ul {
 
 .container-fluid {
     padding: 0;
+    max-width: 1700px;
 }
