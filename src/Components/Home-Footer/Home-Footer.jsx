@@ -4,7 +4,12 @@ import { Row } from "react-bootstrap";
 
 function HomeFooter() {
     return (
-        <div className="home-footer">
+        <div 
+        data-aos="zoom-in-up"
+        data-aos-duration="1000" 
+        data-aos-offset="0"
+        className="home-footer"
+        >
             <Row className="home-footer__top">
                 <div className="col-sm-6 footer-top__left">
                     <h3 className="left-footer__lead">О НАС</h3>

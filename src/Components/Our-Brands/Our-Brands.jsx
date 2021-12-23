@@ -53,12 +53,11 @@ function OurBrands(props) {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 400,
         slidesToShow: 6,
         slidesToScroll: 2,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 2500,
+        speed: 500,
         responsive: [
             {
                 breakpoint: 1440,
@@ -96,8 +95,13 @@ function OurBrands(props) {
       };
 
     return (
-        <div>
-            <div className="container-fluid brands-section">
+        <div 
+        data-aos="fade-up"
+        data-aos-duration="1000" 
+        data-aos-offset="0"
+        className="container-fluid"
+        >
+            <div className="brands-section">
                 <h2 className="brands-lead">наши бренды</h2>
                 <hr className="brands__line" />
             </div>

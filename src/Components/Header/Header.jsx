@@ -2,12 +2,13 @@ import "./Header.scss"
 
 //Hooks
 import { NavLink, Link } from "react-router-dom";
-import { useRef } from "react"
-import { useState, useEffect } from "react";
+import { useRef, useContext, useState, useEffect } from "react"
 import { Row } from "react-bootstrap";
+
 
 //components
 import SignUpModal from "../Sign-up-modal/Sign-up-modal";
+// import { Context } from "../../Components/Context/headerContext";
 // import ModalChat from "../Modal-chat/Modal-chat";
 
 //images
@@ -19,9 +20,9 @@ import ShoppingIcon from "../../Assets/image/shoppingIcon";
 import LogoHead from "../../Assets/image/matnar-logo.png"
 import ChatIcon from "../../Assets/image/chat-icon.png"
 
-
-
 function Header() {
+
+    // const { product, setProduct } = useContext(Context);
 
     const langBox = useRef();
 
@@ -73,6 +74,7 @@ function Header() {
         }
       });
     }, []);
+      
 
     return (
         <>
@@ -82,9 +84,36 @@ function Header() {
                         <div className="col-4 header-top__left">
                             <p className="header-top__tel">+998 99 111 11 95 | Работаем 7 дней в неделю | 24/7</p>
                             <ul className="header-top__list">
-                                <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/men">Мужское</NavLink></li>
-                                <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/" exact>Женское</NavLink></li>
-                                <li className="header-top__item"><NavLink className="header-top__lang-link" activeClassName="header-top__link-active" to="/kids">Детское</NavLink></li>
+                                <li className="header-top__item">
+                                    <NavLink 
+                                    className="header-top__lang-link" 
+                                    activeClassName="header-top__link-active" 
+                                    // onClick={() => setProduct('men')} 
+                                    to="/men" exact
+                                    >
+                                    Мужское
+                                    </NavLink>
+                                </li>
+                                <li className="header-top__item">
+                                    <NavLink 
+                                    className="header-top__lang-link" 
+                                    activeClassName="header-top__link-active" 
+                                    // onClick={() => setProduct('women')} 
+                                    to="/women"
+                                    >
+                                    Женское
+                                    </NavLink>
+                                </li>
+                                <li className="header-top__item">
+                                    <NavLink 
+                                    className="header-top__lang-link" 
+                                    activeClassName="header-top__link-active" 
+                                    // onClick={() => setProduct('kids')} 
+                                    to="/kids"
+                                    >
+                                    Детское
+                                    </NavLink>
+                                </li>
                             </ul>
                         </div>
                         <div className="col-4 site-logo__wrap">
@@ -108,7 +137,7 @@ function Header() {
                             <div className="header-btn__box">
                                 <div>
                                     <button className="header__btn search-open__btn" onClick={OpenSearch}><Minefer /></button>
-                                    <div className="search-input__wrap" ref={searchInput} onMouseLeave={CloseSearch}>
+                                    <div className="vov fade-in-right faster search-input__wrap" ref={searchInput} onMouseLeave={CloseSearch}>
                                         <form> 
                                             <button className="search-btn"><Minefer /></button>
                                             <input className="search__input" type="search" placeholder="Поиск" />
@@ -132,7 +161,7 @@ function Header() {
                     </Row>
                 </div>
             </header>
-            <div className="modal-link" onMouseEnter={onHoverModal} onMouseLeave={onModal} ref={modalLink}>
+            <div className="vov blur-in faster modal-link" onMouseEnter={onHoverModal} onMouseLeave={onModal} ref={modalLink}>
                 <div className="modal-link__wrapper">
                     <div className="modal-wrapper__left">
                         <h3>По разделам</h3>
@@ -174,7 +203,7 @@ function Header() {
                 </div>
             </div>
             {showButton && (
-                <button className="site-chat-bot">
+                <button className="vov fade-in-right faster site-chat-bot">
                   <img src={ChatIcon} alt="arrow" />
                 </button>
             )}

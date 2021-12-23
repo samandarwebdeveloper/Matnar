@@ -21,19 +21,21 @@
             border: 1px solid #FFFFFF;
         }
 
-        .season-section__list {
-            list-style-type: none;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
+        
             .season-list__item {
                 text-align: center;
-                
-                img {
+                margin: 10px;
+                .season-item__img {
                     margin-bottom: 25px;
                     width: 100%;
                     max-width: 260px;
                 }
+
+                .season-list__link {
+                    text-decoration: none;
+
+                }
+
                 .season-item__lead {
                     font-family: 'Playfair Display SC', serif;
                     font-size: 18px;
@@ -48,10 +50,8 @@
                     color: #D0D0D0;
                 }
             }
-            .season-list__item ~ .season-list__item {
-                margin-left: 50px;
-            }
-        }
+            
+        
     }
 
     .season-section__image__wrap {

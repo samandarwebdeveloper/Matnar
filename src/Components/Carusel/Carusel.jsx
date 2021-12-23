@@ -58,7 +58,7 @@ function Carusel(props) {
 
     const settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -90,7 +90,12 @@ function Carusel(props) {
       };
 
     return (
-        <div className="collection-carusel">
+        <div 
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-offset="0"
+        className="collection-carusel"
+        >
         <Slider {...settings}>
             {
                 items.map( (item, i) => <Item key={i} item={item} /> )

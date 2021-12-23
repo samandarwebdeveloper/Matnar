@@ -1,11 +1,13 @@
 import "./Sign-up-modal.scss"
 
+import Aos from "aos"
+
 // images
 import CloseIcon from "../../Assets/image/close-icon.png"
 
 function SignUpModal({modalLink}) {
 
-    
+    Aos.init();
 
     const HandleClose = () => {
         modalLink.current.style.display = "none"
@@ -18,7 +20,7 @@ function SignUpModal({modalLink}) {
 
     return (
         <div className="sign-up__modal" ref={modalLink} onClick={HandleWindowClose}>
-            <div className="sign-up__wrapper">
+            <div className="vov fade-in-up faster sign-up__wrapper">
                 <header className="sign-up__header">
                     <h2 className="sign-up__lead">Укажите телефон</h2>
                     <button className="sign-up__close" onClick={HandleClose}><img src={CloseIcon} alt="close" width={31} height={35} /></button>
