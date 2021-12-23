@@ -2,7 +2,7 @@ import "./Header.scss"
 
 //Hooks
 import { NavLink, Link } from "react-router-dom";
-import { useRef, useContext, useState, useEffect } from "react"
+import { useRef, useState, useEffect } from "react"
 import { Row } from "react-bootstrap";
 
 
