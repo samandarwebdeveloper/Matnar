@@ -5,7 +5,7 @@ import Aos from "aos"
 // images
 import CloseIcon from "../../Assets/image/close-icon.png"
 import LeftIcon from "../../Assets/image/left-arrow.png"
-import { useState } from "react";
+// import { useState } from "react";
 
 function SignUpModal({modalLink}) {
 
