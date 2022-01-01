@@ -8,8 +8,6 @@ import { Route, Switch  } from "react-router";
 // components
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
-// import Product from "./Pages/Product/Product";
-// import Products from "./Components/Products/Products"
 
 function App() {
 
@@ -20,10 +18,6 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact><Home /></Route>
-        {/* <Route path="/women"><Product /></Route>
-        <Route path="/men"><Product /></Route>
-        <Route path="/kids"><Product /></Route>
-        <Route path="/brend"><Products/></Route> */}
       </Switch>
     </div>
   );

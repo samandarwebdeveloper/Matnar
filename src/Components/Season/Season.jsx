@@ -3,11 +3,13 @@ import "./Season.scss"
 
 import { Link } from "react-router-dom"
 import Slider from "react-slick";
+import { Row } from "react-bootstrap"
+import { useRef } from "react";
 
 //images
 import SeasonListImage from "../../Assets/image/season-list__image.png"
 import SeasonImage from "../../Assets/image/season-image.png"
-import { Row } from "react-bootstrap"
+import Arrow from "../../Assets/image/left-arrow.png"
 
 function Season() {
 
@@ -43,14 +45,15 @@ function Season() {
     ]
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToScroll: true,
         autoplay: true,
         autoplaySpeed: 2000,
         swipeToSlide: true,
+        arrows: false,
         responsive: [
             {
               breakpoint: 1024,
@@ -58,7 +61,6 @@ function Season() {
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: true,
-                dots: true
               }
             },
             {
@@ -76,7 +78,16 @@ function Season() {
               }
             }
         ],
-      };
+    };
+
+    const slider = useRef();
+
+    const next = () => {
+        slider.current.slickNext();
+    }
+    const previous = () => {
+        slider.current.slickPrev();
+    } 
     return (
         <div className="container-fluid">
             <Row className="season-section">
@@ -88,11 +99,19 @@ function Season() {
                 >
                     <h2 className="season-section__lead">СЕЗОН 2021/22</h2>
                     <hr className="season-content__line" />
-                    <Slider {...settings}>
-                        {
-                            items.map( (item, i) => <Item key={i} item={item} /> )
-                        }
-                    </Slider>
+                    <div className="slider-wrap">
+                        <Slider ref={slider} {...settings}>
+                            {
+                                items.map( (item, i) => <Item key={i} item={item} /> )
+                            }
+                        </Slider>
+                    <button className="carusel-prev" onClick={previous}>
+                        <img src={Arrow} alt="icon" />
+                    </button>
+                    <button className="carusel-next" onClick={next}>
+                        <img src={Arrow} alt="icon" />
+                    </button>
+                    </div>
                 </div>
                 <div 
                 data-aos={"fade-left"}

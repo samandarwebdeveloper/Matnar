@@ -1,6 +1,5 @@
 import "./Our-Brands.scss"
 
-import Slider from "react-slick";
 
 import { Link } from "react-router-dom";
 
@@ -32,67 +31,8 @@ function OurBrands(props) {
         {
             img: ArmaniImage,
         },
-        {
-            img: BrandImage,
-        },
-        {
-            img: HermesImage,
-        },
-        {
-            img: DolceImage,
-        },
-        {
-            img: GucciImage,
-        },
-        {
-            img: ArmaniImage,
-        },
     ]
 
-
-    const settings = {
-        dots: false,
-        infinite: true,
-        slidesToShow: 6,
-        slidesToScroll: 2,
-        arrows: false,
-        autoplay: true,
-        speed: 500,
-        responsive: [
-            {
-                breakpoint: 1440,
-                settings: {
-                  slidesToShow: 4,
-                  slidesToScroll: 3,
-                  infinite: true,
-                  dots: false
-                }
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: false
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-        ],
-      };
 
     return (
         <div 
@@ -105,11 +45,11 @@ function OurBrands(props) {
                 <h2 className="brands-lead">наши бренды</h2>
                 <hr className="brands__line" />
             </div>
-            <Slider {...settings}>
+            <div className="brands-list">
                 {
                     items.map( (item, i) => <Item key={i} item={item} /> )
                 }
-            </Slider>
+            </div>
         </div>
     )
 }
@@ -117,7 +57,11 @@ function OurBrands(props) {
 function Item(props)
 {
     return (
-        <div className="brands__item">
+        <div 
+        data-aos="rotate" 
+        data-aos-duration="800" 
+        data-aos-offset="0"  
+        className="brands__item">
             <Link to="/">
                 <img className="brands__item-image" src={props.item.img} alt="brand" />
             </Link>

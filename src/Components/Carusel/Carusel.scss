@@ -1,7 +1,7 @@
 .collection-carusel {
     margin: 0 auto 30px auto;
     max-width: 1200px;
-
+    position: relative;
     .new-clothes__item {
         display: block;
         width: 100%;
@@ -13,7 +13,6 @@
         .new-clothes__item-image {
             display: block;
             width: 100%;
-            margin-bottom: 30px;
         }
 
         .new-collection__item-name {
@@ -24,7 +23,47 @@
             line-height: 24px;
             margin-bottom: 10px;
         }
+
+
+        .img-hover-zoom {
+        overflow: hidden; 
+        margin-bottom: 30px;
+        }
+  
+
+        .img-hover-zoom img {
+          transition: transform .5s ease;
+        }
+  
+ 
+        .img-hover-zoom:hover img {
+          transform: scale(1.5);
+        }
     }
+
+    .carusel-prev {
+        position: absolute;
+        top: 195px;
+        left: -50px;
+        background-color: transparent;
+        border: transparent;
+        img {
+            display: block;
+        }
+    }
+
+    .carusel-next {
+        position: absolute;
+        top: 195px;
+        right: -50px;
+        background-color: transparent;
+        border: transparent;
+        img {
+            display: block;
+            transform: rotate(180deg);
+        }
+    }
+    
 }
 
 

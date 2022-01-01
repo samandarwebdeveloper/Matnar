@@ -8,8 +8,7 @@ import { Row } from "react-bootstrap";
 
 //components
 import SignUpModal from "../Sign-up-modal/Sign-up-modal";
-// import { Context } from "../../Components/Context/headerContext";
-// import ModalChat from "../Modal-chat/Modal-chat";
+
 
 //images
 import RuLangIcon from "../../Assets/image/russia.png"
@@ -21,8 +20,6 @@ import LogoHead from "../../Assets/image/matnar-logo.png"
 import ChatIcon from "../../Assets/image/chat-icon.png"
 
 function Header() {
-
-    // const { product, setProduct } = useContext(Context);
 
     const langBox = useRef();
 
@@ -88,7 +85,7 @@ function Header() {
                                     <NavLink 
                                     className="header-top__lang-link" 
                                     activeClassName="header-top__link-active" 
-                                    // onClick={() => setProduct('men')} 
+                                    
                                     to="/men" exact
                                     >
                                     Мужское
@@ -98,7 +95,7 @@ function Header() {
                                     <NavLink 
                                     className="header-top__lang-link" 
                                     activeClassName="header-top__link-active" 
-                                    // onClick={() => setProduct('women')} 
+                                    
                                     to="/women"
                                     >
                                     Женское
@@ -108,7 +105,7 @@ function Header() {
                                     <NavLink 
                                     className="header-top__lang-link" 
                                     activeClassName="header-top__link-active" 
-                                    // onClick={() => setProduct('kids')} 
+                                    
                                     to="/kids"
                                     >
                                     Детское
@@ -127,12 +124,6 @@ function Header() {
                                     <button className="modal-lang__btn"><img src={UzLangIcon} alt="flag" /><span>O'zbekcha</span></button>
                                 </div>
                             </div>
-        
-                            {/* <select>
-                                <option value="eng">ENG</option>
-                                <option value="ru">RU</option>
-                                <option value="uz">UZ</option>
-                            </select> */}
                             <button className="header__btn" onClick={HandleOpenModal}>Личный кабинет</button>
                             <div className="header-btn__box">
                                 <div>
@@ -161,7 +152,7 @@ function Header() {
                     </Row>
                 </div>
             </header>
-            <div className="vov blur-in faster modal-link" onMouseEnter={onHoverModal} onMouseLeave={onModal} ref={modalLink}>
+            <div className="vov blur-in fastest modal-link" onMouseEnter={onHoverModal} onMouseLeave={onModal} ref={modalLink}>
                 <div className="modal-link__wrapper">
                     <div className="modal-wrapper__left">
                         <h3>По разделам</h3>
@@ -203,8 +194,8 @@ function Header() {
                 </div>
             </div>
             {showButton && (
-                <button className="vov fade-in-right faster site-chat-bot">
-                  <img src={ChatIcon} alt="arrow" />
+                <button className="site-chat-bot">
+                  <img src={ChatIcon} alt="chat" />
                 </button>
             )}
             <SignUpModal modalLink={CloseWindow} />

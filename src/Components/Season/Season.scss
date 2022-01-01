@@ -1,6 +1,7 @@
 
 .season-section {
     .season-section__content {
+        
         padding: 30px 65px;
         .season-section__lead {
             font-family: 'Podkova', sans-serif;
@@ -49,6 +50,32 @@
                     line-height: 16px;
                     color: #D0D0D0;
                 }
+            }
+
+            .slider-wrap {
+                position: relative;
+                .carusel-prev {
+                    position: absolute;
+                    top: 50%;
+                    left: -50px;
+                    background-color: transparent;
+                    border: transparent;
+                    img {
+                        display: block;
+                    }
+                }
+            
+                .carusel-next {
+                    position: absolute;
+                    top: 50%;
+                    right: -50px;
+                    background-color: transparent;
+                    border: transparent;
+                    img {
+                        display: block;
+                        transform: rotate(180deg);
+                    }
+                }  
             }
             
         

@@ -3,12 +3,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
+import { useRef } from "react";
 // import { Link } from "react-router-dom";
 
 // import leftArrow from "../../Assets/image/left-arrow.png"
 import image from "../../Assets/image/new-dress.png"
 import cloth from "../../Assets/image/cloth.png"
 import dress from "../../Assets/image/dress.png"
+import Arrow from "../../Assets/image/left-arrow.png"
 
 
 
@@ -62,6 +64,7 @@ function Carusel(props) {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
+        arrows: false,
         responsive: [
             {
               breakpoint: 1024,
@@ -89,6 +92,15 @@ function Carusel(props) {
         ],
       };
 
+    const slider = useRef();
+
+    const next = () => {
+        slider.current.slickNext();
+    }
+    const previous = () => {
+        slider.current.slickPrev();
+    } 
+
     return (
         <div 
         data-aos="fade-up"
@@ -96,11 +108,17 @@ function Carusel(props) {
         data-aos-offset="0"
         className="collection-carusel"
         >
-        <Slider {...settings}>
+        <Slider ref={slider} {...settings}>
             {
                 items.map( (item, i) => <Item key={i} item={item} /> )
             }
         </Slider>
+        <button className="carusel-prev" onClick={previous}>
+            <img src={Arrow} alt="icon" />
+        </button>
+        <button className="carusel-next" onClick={next}>
+            <img src={Arrow} alt="icon" />
+        </button>
       </div>
     )
 }
@@ -109,7 +127,9 @@ function Item(props)
 {
     return (
         <div className="new-clothes__item">
-            <img className="new-clothes__item-image" src={props.item.img} alt="dress" />
+            <div className="img-hover-zoom">
+                <img className="new-clothes__item-image" src={props.item.img} alt="dress" />
+            </div>
             <h4 className="new-collection__item-name">{props.item.name}</h4>
             <p>{props.item.description}</p>
         </div>

@@ -1,73 +1,69 @@
 /* GENERAL */
 html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-@mixin scrollbars($size, $foreground-color, $background-color) {
-    ::-webkit-scrollbar-button{
-      display: none;
-    }
-    ::-webkit-scrollbar {
-      width:  $size;
-      height: $size;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #000;
-      border: 1px solid lighten($foreground-color, 10%);
-      cursor: pointer;
-    }
-    ::-webkit-scrollbar-track {
-      background: $background-color;
-      width: calc(#{$size} * 2);
-      border: 2px solid lighten($background-color, 10%);
-    }
-    ::-webkit-scrollbar-track-piece {
-      background: $background-color;
-      width: calc(#{$size} / 2);
-      border: 2px solid lighten($background-color, 10%);
-    }
-    body {
-      scrollbar-face-color: $foreground-color;
-      scrollbar-track-color: $background-color;
-    }
+::-webkit-scrollbar-button {
+  display: none;
 }
-  
-@include scrollbars(2px, rgba(255,255,255,0.15), transparent);
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+  width: 4px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: rgb(121, 121, 121);
+  width: 6px;
+  border-radius: 20px;
+}
+
+
+
 
 body {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 16px;
-    background: linear-gradient(180deg, #06476B 0%, #000000 100%);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  background: linear-gradient(180deg, #06476B 0%, #000000 100%);
 }
 
-body > div {
-    width: 100%;
+body>div {
+  width: 100%;
 }
 
 img {
-    height: auto;
-    object-fit: contain;
-    object-position: center;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
 ul {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .app {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: block;
 }
 
 .container-fluid {
-    padding: 0;
-    max-width: 1700px;
+  padding: 0;
+  max-width: 1700px;
 }

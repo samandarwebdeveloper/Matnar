@@ -51,7 +51,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "react-grid-carousel": "^1.0.1"
-  }
+  "devDependencies": {}
 }
