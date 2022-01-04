@@ -14,13 +14,13 @@ import kids from "../../Assets/image/kurtka.png"
 function Products() {
   const [photos, setPhotos] = useState([]);
   const { product, setProduct } = useContext(Context);
-  // console.log(setProduct);
+  console.log(setProduct);
   // Second Context
   const { items, setItems } = useContext(Content);
 
   useEffect(() => {
-    // console.log(items);
-    // console.log(product);
+    console.log(items);
+    console.log(product);
     fetch('https://jsonplaceholder.typicode.com/photos')
       .then((res) => res.json())
       .then((data) => setPhotos(data))
