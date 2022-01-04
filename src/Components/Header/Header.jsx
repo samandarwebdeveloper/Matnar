@@ -25,6 +25,8 @@ import { Context } from "../../Context/headerContext";
 function Header() {
     const { product, setProduct } = useContext(Context);
 
+    // console.log(product);
+    
     const langBox = useRef();
 
     const langModal = () => {

@@ -1,6 +1,6 @@
 import "./ItemCom.scss";
 import Boot from "../../Assets/image/boot.png";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Content } from "../../Context/itemContext";
 
 function Product() {
