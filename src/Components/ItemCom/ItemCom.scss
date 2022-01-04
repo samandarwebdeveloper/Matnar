@@ -1,0 +1,111 @@
+.item__top-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item__left {
+    margin-top: 60px;
+}
+
+.right__brend-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+    margin-top: 50px;
+
+}
+
+.right__product-name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.right__product-price {
+    display: block;
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+.right__product-color {
+    display: block;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.right__size-title {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 37px;
+    color: #A6A0A0;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.right__size-select {
+    display: block;
+    width: 200px;
+    background-color: transparent;
+    color: rgb(221, 221, 221);
+    border: 3px solid #FFFFFF;
+    outline: none;
+}
+
+.option {
+    background-color: #06476B; 
+}
+
+.right__add-basket {
+    border: none;
+    background: linear-gradient(180.1deg, #06476B 26.34%, #000000 99.91%);
+    padding: 0px 22px;
+    font-size: 18px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 25px;
+}
+
+.right__btn-wrapper {
+    margin-top: 10px;
+}
+
+.right__buy-btn {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 3px solid #FFFFFF;
+}
+
+.right__add-choosen {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 3px solid #FFFFFF;
+    margin-left: 10px;
+    padding-left: 30px;
+    // background-image: url("../../Assets/image/liked.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+}

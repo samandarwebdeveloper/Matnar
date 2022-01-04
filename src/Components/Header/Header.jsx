@@ -2,7 +2,7 @@ import "./Header.scss"
 
 //Hooks
 import { NavLink, Link } from "react-router-dom";
-import { useRef, useState, useEffect } from "react"
+import { useRef, useState, useEffect, useContext } from "react"
 import { Row } from "react-bootstrap";
 
 
@@ -18,8 +18,12 @@ import LikedIcon from "../../Assets/image/liked";
 import ShoppingIcon from "../../Assets/image/shoppingIcon";
 import LogoHead from "../../Assets/image/matnar-logo.png"
 import ChatIcon from "../../Assets/image/chat-icon.png"
+import { Context } from "../../Context/headerContext";
+
+
 
 function Header() {
+    const { product, setProduct } = useContext(Context);
 
     const langBox = useRef();
 
@@ -46,6 +50,7 @@ function Header() {
 
     const HandleOpenModal = () => {
         CloseWindow.current.style.display = "flex"
+        document.body.style.overflow = 'hidden';
     }
 
     const searchInput = useRef();
@@ -85,7 +90,7 @@ function Header() {
                                     <NavLink 
                                     className="header-top__lang-link" 
                                     activeClassName="header-top__link-active" 
-                                    
+                                    onClick={() => setProduct('men')}
                                     to="/men" exact
                                     >
                                     Мужское
@@ -95,7 +100,7 @@ function Header() {
                                     <NavLink 
                                     className="header-top__lang-link" 
                                     activeClassName="header-top__link-active" 
-                                    
+                                    onClick={() => setProduct('women')}
                                     to="/women"
                                     >
                                     Женское
@@ -105,13 +110,21 @@ function Header() {
                                     <NavLink 
                                     className="header-top__lang-link" 
                                     activeClassName="header-top__link-active" 
-                                    
+                                    onClick={() => setProduct('kids')}
                                     to="/kids"
                                     >
                                     Детское
                                     </NavLink>
                                 </li>
                             </ul>
+                            <button className="toggler-menu">
+                                <span className="menuIcon material-icons">
+                                menu
+                                </span>
+                                <span className="xIcon material-icons">
+                                close
+                                </span>
+                            </button>
                         </div>
                         <div className="col-4 site-logo__wrap">
                             <a className="site-logo__link" href="/"><img src={LogoHead} alt="site logo" /></a>
@@ -124,7 +137,7 @@ function Header() {
                                     <button className="modal-lang__btn"><img src={UzLangIcon} alt="flag" /><span>O'zbekcha</span></button>
                                 </div>
                             </div>
-                            <button className="header__btn" onClick={HandleOpenModal}>Личный кабинет</button>
+                            <button className="header__btn personal" onClick={HandleOpenModal}>Личный кабинет</button>
                             <div className="header-btn__box">
                                 <div>
                                     <button className="header__btn search-open__btn" onClick={OpenSearch}><Minefer /></button>
@@ -140,7 +153,7 @@ function Header() {
                             </div>
                         </div>
                     </Row>
-                    <Row className="header-bottom">
+                    <Row className="header-bottom" id="navbarSupportedContent">
                         <ul className="col-8 header-links-list">
                             <li className="header-links-item"><Link className="header-link" to="/">НОВИНКИ</Link></li>
                             <li className="header-links-item"><Link className="header-link" to="/" onMouseEnter={onHoverModal} onMouseLeave={onModal}>БРЕНДЫ</Link></li>
@@ -152,7 +165,7 @@ function Header() {
                     </Row>
                 </div>
             </header>
-            <div className="vov blur-in fastest modal-link" onMouseEnter={onHoverModal} onMouseLeave={onModal} ref={modalLink}>
+            <div className="vov fade-in fastest modal-link" onMouseEnter={onHoverModal} onMouseLeave={onModal} ref={modalLink}>
                 <div className="modal-link__wrapper">
                     <div className="modal-wrapper__left">
                         <h3>По разделам</h3>

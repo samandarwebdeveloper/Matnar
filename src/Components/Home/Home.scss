@@ -1,3 +1,4 @@
+@import "../../Assets/scss/mixens.scss";
 
 .hero-section__wrapper {
     position: relative;
@@ -37,3 +38,44 @@
     
 }
 
+@include breakpoint-down (1024px) {
+    .hero-section__wrapper {
+        .video-section {
+            height: 440px;
+        }
+    }
+    
+    .hero-section {
+        .hero-image__wrap {
+          height: 440px;
+        }
+    }
+}
+
+@include breakpoint-down (525px) {
+    .hero-section__wrapper {
+        .video-section {
+            height: 400px;
+        }
+    }
+    
+    .hero-section {
+        .hero-image__wrap {
+          height: 400px;
+        }
+    }
+}
+
+@include breakpoint-down (425px) {
+    .hero-section__wrapper {
+        .video-section {
+            height: 220px;
+        }
+    }
+    
+    .hero-section {
+        .hero-image__wrap {
+          height: 220px;
+        }
+    }
+}

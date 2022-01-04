@@ -13,10 +13,13 @@ function SignUpModal({modalLink}) {
 
     const HandleClose = () => {
         modalLink.current.style.display = "none"
+        document.body.style.overflowY = 'unset';
+
     }
     const HandleWindowClose = (evt) => {
         if (evt.target === modalLink.current) {
             modalLink.current.style.display = "none"
+            document.body.style.overflowY = 'unset';
         }
     }
 
