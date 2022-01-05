@@ -88,4 +88,83 @@
             
         }
     }
+
+    .sign-up-code__wrapper {
+        display: none;
+        position: relative;
+        width: 600px;
+        padding: 50px 53px 28px 53px;
+        background: linear-gradient(180deg, #06476B 0%, #000000 100%);
+        border-radius: 54px;
+        z-index: 999;
+
+        .sign-up-code__header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 70px;
+            color: #fff;
+
+            .prev-btn {
+                position: absolute;
+                left: -10px;
+                background-color: transparent;
+                border: transparent;
+                img {
+                    width: 30px;
+                }
+            }
+
+            .sign-up__close {
+                position: absolute;
+                background-color: transparent;
+                border: transparent;
+                cursor: pointer;
+                right: 0;
+            }
+            .sign-up-code__lead {
+                font-family: PT Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 31px;
+            }
+        }
+
+        .sign-up-code__content {
+            text-align: center;
+            .sign-up-code__input {
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+                background: #C4C4C4;
+                border-radius: 14px;
+                font-size: 48px;
+                text-align: center;
+                outline-color: #462a2a;
+                margin-bottom: 75px;
+            }
+
+            .sign-up-code__text {
+                font-family: PT Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 23px;
+                text-align: center;
+                color: #9C9C9C;
+            }
+
+            .sign-up-code__timer {
+                font-family: PT Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                color: #9A9A9A;
+            }
+        }
+    }
 }

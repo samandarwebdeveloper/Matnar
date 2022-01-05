@@ -1,3 +1,9 @@
+.product-header {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 50px;
+}
+
 .product-title{
     text-transform: uppercase;
     font-family: PT Mono;
@@ -5,67 +11,60 @@
     font-weight: normal;
     font-size: 42px;
     line-height: 1.5;
-    color: #fff;
-    text-align: center;
+    margin-bottom: 12px;
 }
 .product-wrapper{
+    padding: 10px 20px;
     display: flex;
+
+    .accordion-list {
+        background-color: transparent;
+        color: #fff;
+        box-shadow: none;
+        border-bottom: 1px solid #808080;
+
+        .accordion-list__item {
+            margin-bottom: 5px;
+
+        }
+        .accordion-list__link {
+            text-decoration: none;
+            color: #fff;
+
+            &:hover {
+                color: #8a8a8a;
+            }
+        }
+    }
+
     ul{
         list-style-type: none;
         color: #fff;
     }
-    .carousel{
-        // max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .form-select{
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid rgb(255, 255, 255);
-        outline: none;
-        width: 200px;
-        color: #fff;
-        option{
-            background-color: transparent;
-        }
-    }
 }
-.product-container{
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.home {
-
-    &-list {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-
-       
-
-        &__item {
-            margin: 70px;
-            text-align: center;
+.product-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    &__item {
+        margin: 0 25px 25px 25px;
+        text-align: center;  
+        img {
             border-radius: 14px;
-            padding: 5px;
-
-            img {
-                border-radius: 14px;
-                width: 270px;
-                height: 407px;
-            }
-            h2{
-                text-transform: uppercase;
-                color: #fff;
-            }
-            p{
-                text-transform: uppercase;
-                color: #fff;
-            }
+            width: 270px;
         }
+        h2{
+            text-transform: uppercase;
+            color: #fff;
+        }
+        p{
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
+    &__link {
+        text-decoration: none;
     }
 }

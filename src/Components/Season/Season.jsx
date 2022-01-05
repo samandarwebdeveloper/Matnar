@@ -17,29 +17,29 @@ function Season() {
         {
             img: SeasonListImage,
             name: "Louis XVI ATHOS",
-            description: "22.300.000 sum/2203 $"
+            description: "22.300.000 sum"
         },
         {   img: SeasonListImage,
             name: "Louis XVI ATHOS",
-            description: "22.300.000 sum/2203 $"
+            description: "22.300.000 sum"
         },
         {
             img: SeasonListImage,
             name: "Louis XVI ATHOS",
-            description: "22.300.000 sum/2203 $"
+            description: "22.300.000 sum"
         },
         {   img: SeasonListImage,
             name: "Louis XVI ATHOS",
-            description: "22.300.000 sum/2203 $"
+            description: "22.300.000 sum"
         },
         {
             img: SeasonListImage,
             name: "Louis XVI ATHOS",
-            description: "22.300.000 sum/2203 $"
+            description: "22.300.000 sum"
         },
         {   img: SeasonListImage,
             name: "Louis XVI ATHOS",
-            description: "22.300.000 sum/2203 $"
+            description: "22.300.000 sum"
         },
         
     ]
@@ -73,7 +73,7 @@ function Season() {
             {
               breakpoint: 480,
               settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1
               }
             }

@@ -360,7 +360,7 @@
 @include breakpoint-down (1024px) {
 
     .site-header {
-        padding-top: 0;
+        padding-top: 5px;
         .site-header__wrapper {
             display: flex;
             align-items: center;
@@ -372,7 +372,7 @@
         .header-top {
 
             .header-top__left {
-
+                padding-left: 0;
                 .header-top__tel {
                     display: none;
                 }
@@ -391,9 +391,6 @@
                     border-radius: 10px;
                     cursor: pointer;
                     outline: none;
-                    &:focus {
-                        border: 3px solid #002;
-                    }
                 }
                 .menuIcon {
                     display: block;
@@ -444,7 +441,9 @@
                     }
                 }
 
-
+                .header__btn:not(:last-child) {
+                    margin-right: 10px;
+                }
 
                 .personal {
                     display: none;
@@ -505,6 +504,11 @@
 @include breakpoint-down (685px) {
 
     .site-header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: #06476B;
+        z-index: 9999;
         .header-bottom {
             display: none;
         }
@@ -517,8 +521,6 @@
     .site-header {
 
         .header-top {
-
-
             .header-top__right {
 
                 .header-lang__wrap {

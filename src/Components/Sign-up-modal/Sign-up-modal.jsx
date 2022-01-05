@@ -1,15 +1,26 @@
 import "./Sign-up-modal.scss"
 
-import Aos from "aos"
 
 // images
 import CloseIcon from "../../Assets/image/close-icon.png"
 import LeftIcon from "../../Assets/image/left-arrow.png"
-// import { useState } from "react";
+import { useState } from "react";
+import { useRef } from "react";
 
 function SignUpModal({modalLink}) {
 
-    Aos.init();
+    const signNumber = useRef();
+    const signCode = useRef();
+
+    const CloseSignNumber =() => {
+        signNumber.current.style.display = "none"
+        signCode.current.style.display = "block"
+    }
+
+    const OpenSignNumber =() => {
+        signNumber.current.style.display = "block"
+        signCode.current.style.display = "none"
+    }
 
     const HandleClose = () => {
         modalLink.current.style.display = "none"
@@ -23,12 +34,12 @@ function SignUpModal({modalLink}) {
         }
     }
 
-    // const [telephone, setTelephone] = useState();
+    const [telephone, setTelephone] = useState();
 
-    // const onTelephone = (e) => {
-    // const value = e.target.value.test(/^998[389][012345789][0-9]{7}/g);
-    // setTelephone(value);
-    // };
+    const onTelephone = (e) => {
+    const value = e.target.value.replace(/\D/g, "+");
+    setTelephone(value);
+    };
 
     // const [password, setPassword] = useState();
 
@@ -39,7 +50,7 @@ function SignUpModal({modalLink}) {
 
     return (
         <div className="sign-up__modal" ref={modalLink} onClick={HandleWindowClose}>
-            <div className="vov fade-in-up faster sign-up__wrapper">
+            <div className="vov fade-in-up faster sign-up__wrapper" ref={signNumber}>
                 <header className="sign-up__header">
                     <h2 className="sign-up__lead">Укажите телефон</h2>
                     <button 
@@ -55,50 +66,53 @@ function SignUpModal({modalLink}) {
                         <input 
                         className="sign-up__input-tel" 
                         type="tel" 
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        value={telephone}
+                        onChange={onTelephone}
                         defaultValue="+998" 
                         maxLength="13" 
                         minLength="13" 
                         required />
                         <p className="sign-up__text">Мы отправим СМС с кодом для входа в Ваш личный кабинет</p>
-                        <button className="sign-up__btn">Отправить</button>
                     </form>
+                        <button className="sign-up__btn" onClick={CloseSignNumber} type="submit">Отправить</button>
                 </div>
             </div>
-            <div>
-                <header>
-                    <button>
+            <div className="sign-up-code__wrapper" ref={signCode}>
+                <header className="sign-up-code__header">
+                    <button className="prev-btn" onClick={OpenSignNumber}>
                         <img src={LeftIcon} alt="icon" />
                     </button>
-                    <h2>Укажите код из СМС</h2>
+                    <h2 className="sign-up-code__lead">Укажите код из СМС</h2>
                     <button className="sign-up__close" 
                     onClick={HandleClose}>
                         <img src={CloseIcon} alt="close" width={31} height={35} />
                     </button>
                 </header>
-                <div>
+                <div className="sign-up-code__content">
                     <form>
-                        <input type="text" 
+                        <input className="sign-up-code__input" type="text" 
                         maxLength="1" 
                         minLength="1" 
                         required
                         />
-                        <input type="text" 
+                        <input className="sign-up-code__input" type="text" 
                         maxLength="1" 
                         minLength="1" 
                         required
                         />
-                        <input type="text" 
+                        <input className="sign-up-code__input" type="text" 
                         maxLength="1" 
                         minLength="1" 
                         required
                         />
-                        <input type="text" 
+                        <input className="sign-up-code__input" type="text" 
                         maxLength="1" 
                         minLength="1" 
                         required
                         />
                     </form>
+                    <p className="sign-up-code__text">Мы отправили СМС с кодом подтверждения на номер <br /> +998 (__) ___ __ __</p>
+                    <p className="sign-up-code__timer">Получить новый код можно через 00:45</p>
                 </div>
             </div>
         </div>

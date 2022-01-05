@@ -41,13 +41,22 @@
 @include breakpoint-down (1024px) {
     .hero-section__wrapper {
         .video-section {
-            height: 440px;
+            height: 380px;
         }
     }
     
     .hero-section {
         .hero-image__wrap {
-          height: 440px;
+          height: 380px;
+        }
+    }
+}
+
+@include breakpoint-down (685px) {
+    .hero-section__wrapper {
+        margin-top: 52px;
+        .video-section {
+            
         }
     }
 }

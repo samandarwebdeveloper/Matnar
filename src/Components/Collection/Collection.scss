@@ -1,3 +1,5 @@
+@import "../../Assets/scss/mixens.scss";
+
 .collection-section {
 
     .collection-image__wrap {
@@ -54,4 +56,126 @@
         }
     }
 
+}
+
+@include breakpoint-down (1024px) {
+    .collection-section {
+        .collection-section__content {
+            padding: 15px 30px;
+    
+            .collection-content__lead {
+                font-size: 32px;
+                line-height: 1.2;
+                margin-bottom: 10px;
+            }
+    
+            .collection-content__line {
+                margin: 0 auto 20px auto;
+            }
+    
+            .collection-content__text {
+                font-size: 16px;
+                line-height: 1.3;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+    
+            .collection-content__link {
+                font-size: 16px;
+                line-height: 1.2;
+                padding: 10px 30px;
+            }
+        }
+    
+    }
+}
+
+@include breakpoint-down (785px) {
+    .collection-section {
+        .collection-section__content {
+            padding: 15px 30px;
+    
+            .collection-content__lead {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+    
+            .collection-content__line {
+                margin: 0 auto 10px auto;
+            }
+    
+            .collection-content__text {
+                font-size: 12px;
+                line-height: 1.5;
+                margin-bottom: 10px;
+            }
+    
+            .collection-content__link {
+                font-size: 12px;
+                line-height: 1.2;
+                padding: 8px 10px;
+            }
+        }
+    
+    }
+}
+
+@include breakpoint-down (685px) {
+    .collection-section {
+        padding-top: 10px;
+        .collection-section__content {
+            padding: 20px 35px;
+    
+            .collection-content__lead {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+    
+            .collection-content__line {
+                margin: 0 auto 20px auto;
+            }
+    
+            .collection-content__text {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+    
+            .collection-content__link {
+                font-size: 14px;
+                line-height: 1.2;
+                padding: 8px 10px;
+            }
+        }
+    
+    }
+}
+
+@include breakpoint-down (385px) {
+    .collection-section {
+        padding-top: 10px;
+        .collection-section__content {
+            padding: 20px 38px;
+    
+            .collection-content__lead {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+    
+            .collection-content__line {
+                margin: 0 auto 20px auto;
+            }
+    
+            .collection-content__text {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+    
+            .collection-content__link {
+                font-size: 14px;
+                line-height: 1.2;
+                padding: 8px 10px;
+            }
+        }
+    
+    }
 }

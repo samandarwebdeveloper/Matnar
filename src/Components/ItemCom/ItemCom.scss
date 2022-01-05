@@ -1,10 +1,10 @@
-.item__top-wrapper {
-    display: flex;
-    justify-content: space-evenly;
+.item-wrapper {
+    padding: 0 50px;
 }
 
 .item__left {
     margin-top: 60px;
+    text-align: center;
 }
 
 .right__brend-title {
@@ -85,6 +85,7 @@
 
 .right__btn-wrapper {
     margin-top: 10px;
+    margin-bottom: 70px;
 }
 
 .right__buy-btn {
@@ -103,9 +104,7 @@
     color: #FFFFFF;
     background-color: transparent;
     border: 3px solid #FFFFFF;
-    margin-left: 10px;
-    padding-left: 30px;
-    // background-image: url("../../Assets/image/liked.png");
+    margin-left: 10px;   
     background-size: 25px;
     background-repeat: no-repeat;
 }

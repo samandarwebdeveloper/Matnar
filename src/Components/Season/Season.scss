@@ -1,3 +1,4 @@
+@import "../../Assets/scss/mixens.scss";
 
 .season-section {
     .season-section__content {
@@ -122,4 +123,227 @@
         
     }
     
+}
+
+@include breakpoint-down (1024px) {
+    .season-section {
+        .season-section__content {
+            
+            padding: 10px 30px;
+            .season-section__lead {
+                font-size: 32px;
+                line-height: 1.5;
+                margin-bottom: 10px;
+            }
+    
+            .season-content__line {
+                margin: 0 auto 20px auto;
+            }
+                .season-list__item {
+
+                    .season-item__img {
+                        margin-bottom: 15px;
+                    }
+                    .season-item__lead {
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+    
+                    .season-item__text {
+                        font-size: 14px;
+                        line-height: 1.5;
+                    }
+                }
+    
+                .slider-wrap {
+                    .carusel-prev {
+                        left: -30px;
+                    }
+                
+                    .carusel-next {
+                        right: -30px;
+                    }  
+                }
+                
+            
+        }
+    
+        .season-section__image__wrap {
+    
+            .season-section__image-content {
+                bottom: 12px;
+                .season-image__lead {
+                    font-size: 28px;
+                    line-height: 1.5;
+                    margin-bottom: 10px;
+                }
+        
+                .season-image__link {
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+            }
+            
+        }
+        
+    }
+}
+
+@include breakpoint-down (785px) {
+    .season-section {
+        .season-section__content {
+            
+            padding: 0px 40px;
+            .season-section__lead {
+                font-size: 28px;
+                margin-bottom: 5px;
+            }
+    
+            .season-content__line {
+                margin: 0 auto 10px auto;
+            }
+                .season-list__item {
+                    margin: 2px;
+                    .season-item__img {
+                        margin-bottom: 5px;
+                    }
+                    .season-item__lead {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+    
+                    .season-item__text {
+                        font-size: 12px;
+                    }
+                }
+    
+                .slider-wrap {
+                    .carusel-prev {
+                        left: -35px;
+                        img {
+                            width: 35px;
+                        }
+                    }
+                
+                    .carusel-next {
+                        right: -35px;
+                        img {
+                            width: 35px;
+                        }
+                    }  
+                }
+                
+            
+        }
+    
+        .season-section__image__wrap {
+    
+            .season-section__image-content {
+                bottom: 18px;
+                .season-image__lead {
+                    font-size: 22px;
+                }
+        
+                .season-image__link {
+                    font-size: 14px;
+                    padding: 6px 20px;
+                }
+            }
+            
+        }
+        
+    }
+}
+
+@include breakpoint-down (480px) {
+    .season-section {
+        .season-section__content {
+            padding: 10px 45px;
+            .season-section__lead {
+                font-size: 26px;
+                margin-bottom: 10px;
+            }
+    
+            .season-content__line {
+                margin: 0 auto 20px auto;
+            }
+                .season-list__item {
+                    .season-item__img {
+                        margin-bottom: 10px;
+                    }
+                }
+    
+                .slider-wrap {
+                    .carusel-prev {
+                        left: -25px;
+                        padding: 0;
+                        img {
+                            width: 25px;
+                        }
+                    }
+                
+                    .carusel-next {
+                        right: -25px;
+                        padding: 0;
+                        img {
+                            width: 25px;
+                        }
+                    }  
+                }
+                
+            
+        }
+    
+        .season-section__image__wrap {
+            .season-section__image-content {
+                bottom: 12px;
+                .season-image__lead {
+                    font-size: 22px;
+                }
+        
+                .season-image__link {
+                    font-size: 14px;
+                    padding: 6px 20px;
+                }
+            }
+            
+        }
+        
+    }
+}
+
+@include breakpoint-down (375px) {
+    .season-section {
+        .season-section__content {
+            padding: 10px 40px;
+            .season-section__lead {
+                font-size: 26px;
+                margin-bottom: 10px;
+            }
+    
+            .season-content__line {
+                margin: 0 auto 20px auto;
+            }
+                .season-list__item {
+                    .season-item__img {
+                        margin-bottom: 15px;
+                    }
+                }
+    
+                .slider-wrap {
+                    .carusel-prev {
+                        left: -25px;
+                        padding: 0;
+                    }
+                
+                    .carusel-next {
+                        right: -25px;
+                        padding: 0;
+                    }  
+                }
+                
+            
+        }
+        
+    }
 }
