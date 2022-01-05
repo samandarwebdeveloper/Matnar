@@ -36,8 +36,8 @@ function Home() {
             <Season />
             <Collection />
             <NewProducts />
-            {/* <OurBrands />
-            <HomeFooter /> */}
+            <OurBrands />
+            <HomeFooter />
         </>
     )
 }

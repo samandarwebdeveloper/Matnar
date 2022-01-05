@@ -20,10 +20,10 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact><Home /></Route>
-        {/* <Route path="/women"><Products /></Route>
+        <Route path="/women"><Products /></Route>
         <Route path="/men"><Products /></Route>
         <Route path="/kids"><Products /></Route>
-        <Route path="/product"><Product/></Route> */}
+        <Route path="/product"><Product/></Route>
       </Switch>
     </div>
   );
