@@ -21,13 +21,9 @@ import kids from "../../Assets/image/kurtka.png"
 function Products() {
   const [photos, setPhotos] = useState([]);
   const { product, setProduct } = useContext(Context);
-  console.log(setProduct);
-  // Second Context
   const { items, setItems } = useContext(Content);
 
   useEffect(() => {
-    console.log(items);
-    console.log(product);
     fetch('https://jsonplaceholder.typicode.com/photos')
       .then((res) => res.json())
       .then((data) => setPhotos(data))
@@ -91,11 +87,11 @@ function Products() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <ul>
-                {
-                    links.map( (item, i) => <Brand key={i} item={item} /> )
-                }
-                </ul>
+                <p>
+                  {
+                      links.map( (item, i) => <Brand key={i} item={item} /> )
+                  }
+                </p>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -109,11 +105,11 @@ function Products() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <ul>
-                {
-                    links.map( (item, i) => <Clothes key={i} item={item} /> )
-                }
-                </ul>
+                <p>
+                  {
+                      links.map( (item, i) => <Clothes key={i} item={item} /> )
+                  }
+                </p>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -127,11 +123,11 @@ function Products() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <ul>
-                {
-                    links.map( (item, i) => <Clothes key={i} item={item} /> )
-                }
-                </ul>
+                <p>
+                  {
+                      links.map( (item, i) => <Clothes key={i} item={item} /> )
+                  }
+                </p>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -145,11 +141,11 @@ function Products() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <ul>
-                {
-                    links.map( (item, i) => <Clothes key={i} item={item} /> )
-                }
-                </ul>
+                <p>
+                  {
+                      links.map( (item, i) => <Clothes key={i} item={item} /> )
+                  }
+                </p>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -180,17 +176,17 @@ function Products() {
 
 function Brand(props) {
     return (        
-      <li className="accordion-list__item">
+      <div className="accordion-list__item">
         <Link className="accordion-list__link" to="/product">{props.item.brand}</Link>
-      </li>        
+      </div>        
     )
 }
 
 function Clothes(props) {
   return (        
-    <li className="accordion-list__item">
+    <div className="accordion-list__item">
       <Link className="accordion-list__link" to="/product">{props.item.clothes}</Link>
-    </li>        
+    </div>        
   )
 }
 
